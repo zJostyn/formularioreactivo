@@ -1,0 +1,23 @@
+.formulario {
+    position: absolute;
+    width: 700px;
+    align-items: center;
+    left: 800px;
+    top: 40px;
+}
+
+.formulario input {
+    margin-bottom: 10px;
+}
+
+.formulario button {
+    margin-bottom: 10px;
+}
+
+.formulario input[type="text"] {
+    width: 300px;
+}
+
+.formulario input[type="date"] {
+    width: 300px;
+}

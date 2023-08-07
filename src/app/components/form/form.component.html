@@ -1,0 +1,47 @@
+<form #forma="ngForm" class="row g-3 needs-validation" class="formulario" novalidate>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Cedula:</label>
+        <input #cedula="ngModel" [(ngModel)]="persona.cedula" name="cedula" type="text" minlength="10" class="form-control" id="validationCustom01" placeholder="Ingrese su cedula" required>
+        <div class="valid-feedback">
+            Se ve bien!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Nombre:</label>
+        <input #nombre="ngModel" [(ngModel)]="persona.nombre" name="nombre" type="text" class="form-control" id="validationCustom02" placeholder="Ingrese su nombre completo" required>
+        <div class="valid-feedback">
+            Se ve bien!
+        </div>
+    </div>
+    <div class="col-md-5">
+        <label for="validationCustom03" class="form-label">Fecha:</label>
+        <div class="input-group has-validation">
+            <input #fecha="ngModel" [(ngModel)]="persona.fecha" name="fecha" type="date" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+                Porfavor escoja una fecha.
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <label for="validationCustom03" class="form-label">Ciudad</label>
+        <input #ciudad="ngModel" [(ngModel)]="persona.ciudad" name="ciudad" type="text" class="form-control" id="validationCustom03" placeholder="Ingrese su ciudad" required>
+        <div class="invalid-feedback">
+            Porfavor escriba una ciudad.
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+          Acepto los terminos y condiciones
+        </label>
+            <div class="invalid-feedback">
+                Necesitas aceptar los terminos y condiciones.
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit" [disabled]="!forma.valid" (click)="submit()">Enviar Usuario</button>
+    </div>
+</form>
